@@ -14,7 +14,7 @@
     </modules>
 
     <properties>
-        <lab3.version>1.0-SNAPSHOT</lab3.version>
+        <lab3.version>1.0</lab3.version>
     </properties>
 
     <parent>

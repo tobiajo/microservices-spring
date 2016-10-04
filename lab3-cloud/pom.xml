@@ -15,19 +15,22 @@
 
     <properties>
         <lab3.version>1.0</lab3.version>
+        <java.version>1.8</java.version>
+        <boot.version>1.4.1.RELEASE</boot.version>
+        <cloud.version>Camden.RELEASE</cloud.version>
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.1.RELEASE</version>
+        <version>${boot.version}</version>
     </parent>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Camden.RELEASE</version>
+                <version>${cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

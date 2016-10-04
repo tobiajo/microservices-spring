@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>xyz.johansson.microservices-spring</groupId>
-    <artifactId>lab1-spring</artifactId>
+    <artifactId>lab1-boot</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>lab1-spring</name>
+    <name>lab1-boot</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>

@@ -15,17 +15,17 @@ public class Team {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "teamId")
-    private Set<Player> player;
+    private Set<Player> players;
 
     public Team() {
 
     }
 
-    public Team(String name, String location, String mascotte, Set<Player> player) {
+    public Team(String name, String location, String mascotte, Set<Player> players) {
         this.name = name;
         this.location = location;
         this.mascotte = mascotte;
-        this.player = player;
+        this.players = players;
     }
 
     public Long getId() {
@@ -60,11 +60,11 @@ public class Team {
         this.mascotte = mascotte;
     }
 
-    public Set<Player> getPlayer() {
-        return player;
+    public Set<Player> getPlayers() {
+        return players;
     }
 
-    public void setPlayer(Set<Player> player) {
-        this.player = player;
+    public void setPlayers(Set<Player> players) {
+        this.players = players;
     }
 }

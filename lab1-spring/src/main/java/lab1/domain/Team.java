@@ -1,8 +1,7 @@
 package lab1.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Team {
@@ -13,6 +12,21 @@ public class Team {
     private String name;
     private String location;
     private String mascotte;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "teamId")
+    private Set<Player> player;
+
+    public Team() {
+
+    }
+
+    public Team(String name, String location, String mascotte, Set<Player> player) {
+        this.name = name;
+        this.location = location;
+        this.mascotte = mascotte;
+        this.player = player;
+    }
 
     public Long getId() {
         return id;
@@ -44,5 +58,13 @@ public class Team {
 
     public void setMascotte(String mascotte) {
         this.mascotte = mascotte;
+    }
+
+    public Set<Player> getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Set<Player> player) {
+        this.player = player;
     }
 }

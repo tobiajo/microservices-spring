@@ -13,6 +13,15 @@
         <module>client</module>
     </modules>
 
+    <name>lab3-cloud</name>
+    <description>Lab 3 - Create a Spring Cloud Config Server and Client</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>${boot.version}</version>
+    </parent>
+
     <properties>
         <lab3.version>1.0</lab3.version>
         <java.version>1.8</java.version>
@@ -20,11 +29,6 @@
         <cloud.version>Camden.RELEASE</cloud.version>
     </properties>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>${boot.version}</version>
-    </parent>
     <dependencyManagement>
         <dependencies>
             <dependency>

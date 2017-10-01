@@ -14,6 +14,7 @@
         <module>adjective</module>
         <module>noun</module>
         <module>sentence</module>
+        <module>client</module>
     </modules>
     <packaging>pom</packaging>
 

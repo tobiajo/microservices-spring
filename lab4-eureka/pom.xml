@@ -8,12 +8,6 @@
     <version>1.0</version>
     <modules>
         <module>server</module>
-        <module>subject</module>
-        <module>verb</module>
-        <module>article</module>
-        <module>adjective</module>
-        <module>noun</module>
-        <module>sentence</module>
         <module>client</module>
     </modules>
     <packaging>pom</packaging>

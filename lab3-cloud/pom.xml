@@ -7,7 +7,7 @@
     <groupId>xyz.johansson.microservices-spring</groupId>
     <artifactId>lab3-cloud</artifactId>
     <packaging>pom</packaging>
-    <version>${lab3.version}</version>
+    <version>1.0</version>
     <modules>
         <module>server</module>
         <module>client</module>
@@ -19,13 +19,10 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>${boot.version}</version>
+        <version>1.4.1.RELEASE</version>
     </parent>
 
     <properties>
-        <lab3.version>1.0</lab3.version>
-        <boot.version>1.4.1.RELEASE</boot.version>
-        <cloud.version>Camden.RELEASE</cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -36,7 +33,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${cloud.version}</version>
+                <version>Camden.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

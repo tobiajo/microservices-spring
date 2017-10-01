@@ -21,11 +21,11 @@ public class SentenceController {
     public @ResponseBody
     String getSentence() {
         return
-                getWord("LAB4-SUBJECT") + " "
-                        + getWord("LAB4-VERB") + " "
-                        + getWord("LAB4-ARTICLE") + " "
-                        + getWord("LAB4-ADJECTIVE") + " "
-                        + getWord("LAB4-NOUN") + "."
+                getWord("SUBJECT") + " "
+                        + getWord("VERB") + " "
+                        + getWord("ARTICLE") + " "
+                        + getWord("ADJECTIVE") + " "
+                        + getWord("NOUN") + "."
                 ;
     }
 

@@ -1,35 +1,53 @@
+# Properties active for ALL profiles:
+---
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8001  # Expect the Spring Cloud Config server to be running on localhost, port 8001.
+server:
+  port: ${PORT:${SERVER_PORT:0}}  # Select any available port if neither port nor server port are specified.
+
+# Allow Eureka to recognize two apps of the same type on the same host as separate instances:
+eureka:
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+# Depending on which profile is active, the application gives
+# itself a different name when registering with Eureka
+---
+spring:
+  profiles: sentence
+  application:
+   name: sentence
+server:
+  port: 8020  # Fix the sentence server to 8020. This makes it easy to find.
+
 ---
 spring:
   profiles: subject
   application:
-   name: lab4-subject
+   name: subject
 
 ---
 spring:
   profiles: verb
   application:
-   name: lab4-verb
+   name: verb
 
 ---
 spring:
   profiles: article
   application:
-   name: lab4-article
+   name: article
 
 ---
 spring:
   profiles: adjective
   application:
-   name: lab4-adjective
+   name: adjective
 
 ---
 spring:
   profiles: noun
   application:
-   name: lab4-noun
-
----
-spring:
-  profiles: sentence
-  application:
-   name: lab4-sentence
+   name: noun

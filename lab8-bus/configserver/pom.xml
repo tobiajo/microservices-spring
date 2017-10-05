@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>xyz.johansson.microservices-spring</groupId>
-    <artifactId>lab7-hystrix</artifactId>
+    <artifactId>lab8-bus-configserver</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>lab7-hystrix</name>
-    <description>Lab 7 - Using Hystrix Circuit Breakers</description>
+    <name>lab8-bus-configserver</name>
+    <description>Demo project for Spring Cloud Config server</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -20,7 +20,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>lab7.Application</start-class>
+        <start-class>lab8.configserver.Application</start-class>
         <java.version>1.8</java.version>
     </properties>
 
@@ -39,58 +39,20 @@
     </dependencyManagement>
 
     <dependencies>
-
-        <!-- Needed since 1.0.2 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.ant</groupId>
-            <artifactId>ant</artifactId>
-            <version>1.9.3</version>
         </dependency>
 
         <!-- Allow for automatic restarts when classpath contents change. -->
